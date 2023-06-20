@@ -1,0 +1,8 @@
+CREATE TABLE students(ID int,name varchar(20),course varchar);
+CREATE TABLE faculty(name varchar(20),education varchar,specialization varchar);
+INSERT INTO students(ID ,name,course) VALUES (1,'deepthi','maths'),
+(2,'kavi','english');
+INSERT INTO faculty(name,education,specialization) VALUES
+('kavi','phd','electronics'),('sri','M.E','electrical');
+SELECT students.name,faculty.name FROM students
+INNER JOIN faculty on students.name = faculty.name;
